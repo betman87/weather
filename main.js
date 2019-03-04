@@ -15,7 +15,7 @@ function ucitajPrognozu() {
                 let a='';
                 id = podatak[i].woeid;
                 let url2 = `https://proxy-requests.herokuapp.com/https://www.metaweather.com/api/location/${id}`;
-                a="Danasnja temperadura u "+podatak[i].title+" je :";
+                a="Danasnja temperatura u "+podatak[i].title+" je :";
                 fetch(url2).then(odgovor => odgovor.json())
                     .then(podataka => {
                      a+=podataka.consolidated_weather[0].the_temp;
@@ -23,15 +23,7 @@ function ucitajPrognozu() {
                     });
                      
             }
-            //     let c = Object.keys(podatak.query.pages)[0];
-
-            // document.write(podatak.query.pages[c].extract);
-
-            // document.body.innerHTML 
-            //     document.getElementById('k').innerHTML='';
-            //    document.getElementById('k').innerHTML+= podatak.query.pages[c].extract; //probati div
-            // console.log() //ubaci slike i ostalo kuci
-            // document.body.innerHTML+= <img src=${}></img>
+            
         });
 
 }
