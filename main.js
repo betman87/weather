@@ -19,7 +19,8 @@ function ucitajPrognozu() {
                 fetch(url2).then(odgovor => odgovor.json())
                     .then(podataka => {
                      a+=podataka.consolidated_weather[0].the_temp;
-                        document.body.innerText+=a+"\n";
+                        //document.body.innerText+=a+"\n";
+                    document.childNodes[1].innerText+=a+"\n";
                     });
                      
             }
