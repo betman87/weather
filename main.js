@@ -18,8 +18,8 @@ function ucitajPrognozu() {
                 a="Danasnja temperadura u "+podatak[i].title+" je :";
                 fetch(url2).then(odgovor => odgovor.json())
                     .then(podataka => {
-                        a+=podataka.consolidated_weather[0].the_temp;
-                        console.log(a);
+                     a+=podataka.consolidated_weather[0].the_temp;
+                        document.body.innerText+=a+"\n";
                     });
                      
             }
